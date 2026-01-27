@@ -1,0 +1,9 @@
+\documentclass{standalone}
+
+\usepackage{elements}
+
+\begin{document}
+
+\elconf{24}
+
+\end{document}
