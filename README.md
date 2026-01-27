@@ -1,4 +1,4 @@
-# partage de document
+# Partage de documents :
 Ce repository a pour objectif de :
 - déposer des fichiers markdown pour les partager sur codiMD
 - déposer des fichiers LaTeX pour les partager via overleaf, en utilisant un lien de type :
