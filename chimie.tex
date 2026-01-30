@@ -1,6 +1,10 @@
 \documentclass[varwidth]{standalone}
 
 \usepackage{chemmacros}
+\usepackage{chemfig}
+\newcommand{\red}{\.[{.style={draw=red,fill=red}}]} % red dot for single bond in draft mode
+\newcommand{\redd}{\:[{.style={draw=red,fill=red}}]}% red dots for double bond in draft mode
+\newcommand{\draftlp}{\:}
 
 \begin{document}
 
@@ -18,4 +22,37 @@
 
 \ch{2 NO2 <<=> N2O4}
 
+
+\vspace{7mm} 
+\ch{2 "\OX{o1,Na}" + "\OX{r1,Cl}" {}2
+    ->
+    2 "\OX{o2,Na}" {}+ + 2 "\OX{r2,Cl}" {}-
+    }
+\redox(o1,o2)[->,blue]{\small OX: $- 2\el$} 
+\redox(r1,r2)[->,red][-1]{\small RED: $+ 2\el$}
+\vspace{7mm}
+
+
+
+\chemfig{
+\charge{344=\red}{H}
+-[:343.9]\charge{344=\red,164=\red,74=\red,254=\red}{C}
+(
+    -[:73.9]\charge{254=\red}{H}
+)
+(
+    -[:253.9]\charge{74=\red}{H}
+)
+-[:343.9]\charge{164=\red,344=\red,254=\red,74=\red}{C}
+(
+    -[:253.9]\charge{74=\red}{H}
+)
+(
+    -[:73.9]\charge{254=\red}{H}
+)
+-[:343.9]\charge{164=\red,44=\red,224=\:,344=\:}{O}
+-[:43.9]\charge{224=\red}{H}
+}
+
+\orbital{s} \orbital{p} \orbital{sp} \orbital{sp2} \orbital{sp3}
 \end{document}
